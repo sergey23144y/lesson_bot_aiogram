@@ -1,7 +1,7 @@
 import asyncio
 from aiogram import Bot, Dispatcher
 from config import settings
-from handlers import weather
+from handlers import post
 
 
 async def main():
@@ -10,7 +10,7 @@ async def main():
     bot = Bot(token=settings.bot_token)
     dp = Dispatcher()
 
-    dp.include_router(weather.router)
+    dp.include_router(post.router)
 
     await dp.start_polling(bot)
 

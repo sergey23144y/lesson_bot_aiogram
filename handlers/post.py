@@ -1,5 +1,5 @@
 from aiogram import Router, types, html
-from services.weather_api import get_weather
+from services.post_api import get_weather
 from aiogram.filters import CommandStart, Command
 
 router = Router()
